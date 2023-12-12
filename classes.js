@@ -91,13 +91,15 @@ class News{
         if(this.#date > Date.now()) this.#date = Date.now();
        
     }
+
     #dateStr(){
         const msInDay = 1000*60*60*24;
-        let temp = new Date(Date.now()); 
-        let difference = Math.abs(parseInt(temp/msInDay) - parseInt(this.#date/msInDay));
+        let difference = Math.abs(parseInt(Date.now()/msInDay) - parseInt(this.#date/msInDay));
         return difference === 0 ? "today":
-        difference < 7 ? `${difference} days ago`:`${this.#date.getDate()}.${this.#date.getMonth()+1}.${this.#date.getFullYear()}`
+               difference < 7 ? `${difference} days ago`:
+               `${this.#date.getDate()}.${this.#date.getMonth()+1}.${this.#date.getFullYear()}`
     }
+    
     print(){
         document.write(
             `<div class = "news">
