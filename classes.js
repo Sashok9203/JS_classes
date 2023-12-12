@@ -7,7 +7,7 @@ class Square{
         this.#side_a = height;
     }
     
-    getInfo(){console.info(`Side A : ${this.#side_a}`);}
+    getInfo(){console.info(`Height : ${this.#side_a}`);}
 
     getArea(){return this.#side_a**2;}
 
@@ -27,7 +27,7 @@ class Rectangle extends Square{
         this.#side_b = width;
     }
     
-    getInfo(){console.info(`Side A : ${this.side_a}\nSide B : ${this.#side_b}`); }
+    getInfo(){console.info(`Height : ${this.side_a}\nWidth : ${this.#side_b}`); }
 
     getArea(){return this.side_a * this.#side_b;}
 
@@ -103,11 +103,11 @@ class News{
     print(){
         document.write(
             `<div class = "news">
-            <h3>${this.#title}</h3>
-            <h5>${this.#dateStr()}</h5>
-            <p>${this.#text}</p>
-            <span>${this.#tags.join(" ")}</span>
-        </div>`
+                <h3>${this.#title}</h3>
+                <h5>${this.#dateStr()}</h5>
+                <p>${this.#text}</p>
+                <span>${this.#tags.join(" ")}</span>
+            </div>`
         );
     }
 
@@ -119,17 +119,6 @@ class News{
 
     get Text(){return this.#text;}
 }
-
-function newsCompare(a, b) {
-    if (a.date > b.date) {
-      return -1;
-    } else if (a.date < b.date) {
-      return 1;
-    }
-    // a must be equal to b
-    return 0;
-  }
-
 
 // Task 2
 
