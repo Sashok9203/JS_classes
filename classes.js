@@ -27,7 +27,10 @@ class Rectangle extends Square{
         this.#side_b = width;
     }
     
-    getInfo(){console.info(`Height : ${this.side_a}\nWidth : ${this.#side_b}`); }
+    getInfo(){
+      super.getInfo();
+      console.info(`Width : ${this.#side_b}`);
+     }
 
     getArea(){return this.side_a * this.#side_b;}
 
@@ -132,9 +135,8 @@ class NewsFeed{
 
   add(title,text,tags,date){this.#newsArray.push(new News(title,text,tags,date)); }
 
-  delete(delTitle)
-  {
-    let index = this.#newsArray.indexOf(this.#newsArray.find(item=>item.title===delTitle));
+  delete(newsTitle){
+    let index = this.#newsArray.indexOf(this.#newsArray.find(item=>item.title===newsTitle));
     this.#newsArray.splice(index,1);
   }
 
