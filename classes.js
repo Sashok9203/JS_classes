@@ -154,6 +154,7 @@ class NewsFeed{
       });
   }
 
+  clear(){document.body.innerHTML = '';}
  
   getNewsByTag(tag){
     let tagNews = [];
@@ -181,6 +182,7 @@ news.sort();
 news.delete("New #8");
 news.showAll();
 
+//news.clear();
 //let tNews = news.getNewsByTag("#amet");
 //tNews.forEach(item=>{item.print();});
 
