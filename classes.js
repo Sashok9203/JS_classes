@@ -102,7 +102,7 @@ class News{
         document.write(
             `<div class = "news">
             <h3>${this.#title}</h3>
-            <h6>${this.#dateStr()}</h6>
+            <h5>${this.#dateStr()}</h5>
             <p>${this.#text}</p>
             <span>${this.#tags.join(" ")}</span>
         </div>`
@@ -110,8 +110,12 @@ class News{
     }
 
     get date(){return this.#date;}
+
     get tags(){return this.#tags;}
+
     get title(){return this.#title;}
+
+    get Text(){return this.#text;}
 }
 
 function newsCompare(a, b) {
